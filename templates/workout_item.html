@@ -1,0 +1,13 @@
+<div class = "border-bottom row border-secondary" style="margin-bottom: 16px; padding-bottom: 6px;">
+    <div class = "col-9" style=" text-align: left" >
+        <h4 style="color:rgb:(120,120,120); margin-bottom:10px; margin-top:10px;">{{workout['title']}}</h4>
+        <div><b>Location: </b>{{workout['location']}}</div>
+        <div><b>Duration: </b>{{workout['duration']}}</div>
+        {% if 'cost' in workout %}
+        <div><b>Cost: </b>{{workout['cost']}}</div>
+        {%endif %}
+    </div>
+    <div class = "col-3 align-self-center">
+    <a href="mailto:dw.fitness@gmail.com?subject=Booking for {{workout['title']}}" type="button" class="btn btn-outline-secondary">Book</a> <!--Use mailtolink.me to generate email form-->
+    </div>
+</div>
